@@ -1,0 +1,17 @@
+ <div class="container mt-5" style="max-width: 600px">
+
+   <div class="" *ngIf="ngAuthService.userState as user">
+     <div class="media">
+       <div class="media-body">
+         <p>Hi: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></p>
+         <p>User ID: <strong>{{user.uid}}</strong></p>
+         <p>Email: <strong>{{user.email}}</strong></p>
+       </div>
+     </div>
+   </div>
+
+   <a class="btn btn-block btn-primary" (click)="ngAuthService.SignOut()">
+     Sign Out
+   </a>
+
+ </div>

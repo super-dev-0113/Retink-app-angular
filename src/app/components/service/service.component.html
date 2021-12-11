@@ -1,0 +1,30 @@
+
+<section class="banner">
+    <div class="content">
+        <div class="banner-left">
+            <div class="banner-left-header-text">
+                Service
+            </div>
+            <div *ngFor="let service of services">
+              <div class="banner-text-con1">
+                <div>
+                  <img src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-service-cloud-technology-wanicon-flat-wanicon.png"/>              </div>
+                <div>
+                    <span>{{ service.payload.doc.data().service_name }}</span><br>
+                    {{ service.payload.doc.data().service_content }}
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="banner-right">
+            <div class="banner-main-img">
+                <img src="./assets/image/service-img.png" alt="">
+            </div>
+          
+        </div>
+    </div>
+  
+  </section>
+  
+  
+  

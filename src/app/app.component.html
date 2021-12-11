@@ -1,0 +1,57 @@
+
+<header>
+    <div class="_pc header-pc">
+        <div class="header-content">
+            <div class="header-logo">
+                <a routerLink="" >
+                    <img src="./assets/image/logo-wo-subtitle.png" alt="">
+                </a>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a routerLink="" class="bottom-animation">Home</a></li>
+                    <li><a routerLink="/service" class="bottom-animation">Service</a></li>
+                    <li><a routerLink="/about" class="bottom-animation">About us</a></li>
+                </ul>
+            </div> 
+            <div>
+                <a routerLink="/sign-in" class="header-contact-btn btn-primary">
+                    <img src="./assets/image/login-icon.png" alt="">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="_sp">
+        <div class="header-sp-header">
+            <div class="header-logo">
+                <a routerLink="">
+                    <img src="./assets/image/logo-wo-subtitle.png" alt="">
+                </a>
+            </div>
+
+            <div class="header-toggle _sp" id="header_toggle" (click)="ngAuthService.ToggleHeader()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-list" id="menu_list">
+            <div>
+                <ul>
+                    <li><a routerLink="" class="bottom-animation" (click)="ngAuthService.ToggleHeader()">Home</a></li>
+                    <li><a routerLink="/service" class="bottom-animation" (click)="ngAuthService.ToggleHeader()">Service</a></li>
+                    <li><a routerLink="/about" class="bottom-animation" (click)="ngAuthService.ToggleHeader()">About us</a></li>
+                </ul>
+                <div>
+                    <a routerLink="/sign-in" (click)="ngAuthService.ToggleHeader()" class="header-contact-btn btn btn-primary">
+                        <img src="./assets/image/login-icon.png" alt="">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<router-outlet></router-outlet>
